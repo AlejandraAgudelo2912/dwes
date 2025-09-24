@@ -1,9 +1,8 @@
 <?php
-
-function palabraPalindroma($palabra) {
-    
+function esPalindromo($palabra) {
+    $palabra = strtolower(str_replace(' ', '', $palabra));
+    return $palabra === strrev($palabra);
 }
 
-palabraPalindroma("palabra");
-
+echo esPalindromo("Radar") ? "Es palíndromo" : "No es palíndromo";
 ?>
