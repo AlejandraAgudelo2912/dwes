@@ -35,9 +35,10 @@ $a = [
     <table border="1">
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Correo</th>
+               <?php foreach ($a[0] as $campo => $value){
+                 echo "<th>$campo</th>"; 
+               }
+                ?>
             </tr>
         </thead>
         <tbody>
