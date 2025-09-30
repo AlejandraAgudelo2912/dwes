@@ -46,7 +46,7 @@
             <!-- al usar <label> y que coincida con el id del <input> correspondiente, permite que al hacer click 
             en el texto del <label>, el cursor se coloque directamente en el campo asociado -->
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required autofocus>
+            <input type="text" id="nombre" name="nombre" autofocus>
           </p>
           <p>
             <label for="edad">Edad:</label>
