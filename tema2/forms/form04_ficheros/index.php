@@ -1,5 +1,6 @@
 <?php
-
+require_once("includes/funciones.php");
+$subidaOK=false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    
     //############################## depuracion
@@ -18,6 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if($res){
             $mensaje="Fichero subido correctamente";
+            $subidaOK=true;
+            $num_ficheros=numero_ficheros_directorio($ruta_subida);
 
         }else{
             $mensaje="Error al subir el fichero";
@@ -58,13 +61,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 
     <?php
- 
+        if(isset($mensaje)){
+            echo "<p class='mensaje'>$mensaje</p>";
+        }
+        if($subidaOK){
+          echo ("Datos del fichero:<br>");
+          $nombreDelFichero=$_FILES['fichero']['name'];
+          $tamBytes=$_FILES['fichero']['size'];
+          $tamKB=round($tamBytes/1024);
+          echo ("Nombre: $nombreDelFichero <br>");
+          echo ("Tamaño: $tamBytes bytes | $tamKB KB <br>");
+          echo "<img src='bbdd/$nombreDelFichero' alt='imagen subida' width='300px'>";
+          echo "<p>Numero de ficheros en la ruta bbdd/: $num_ficheros</p>";
+        }
+
 
 
     ?>
-
-
-
   </main>
   <footer>
     <hr>
