@@ -1,0 +1,25 @@
+{
+    "name": "crud_profesor/app",
+    "description": "Proyecto CRUD para la gestión de profesores",
+    "type": "project",
+    "autoload":{
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": [
+            "src/helpers/funciones.php"
+        ]
+    },
+    "authors":[
+        {
+            "name": "Alejandra Agudelo Varela",
+            "email": "alejandra@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "3.9",
+        "mpdf/mpdf": "^8.1"
+    }
+
+    
+}

@@ -1,0 +1,27 @@
+[
+    {
+        "nombre": "PRUEBA",
+        "email": "PRUEBA",
+        "password": "PRUEBA"
+    },
+    {
+        "nombre": "SADFGHGHH",
+        "email": "test@example.com",
+        "password": "$2y$10$bvk\/ZQlntDqHQnMWkM6fE.0EiQkmMZfDM0H0QlIm4YYISNBPgatoe"
+    },
+    {
+        "nombre": "hgfdehgjh",
+        "email": "alejandra@gmail.com",
+        "password": "$2y$10$uAuab7Ls2Ofh9qO25C.DguxN74HOTz.lsX4QeKc12Qb5GTyXUZUR6"
+    },
+    {
+        "nombre": "hgfdehgjh",
+        "email": "needHelp@komun.com",
+        "password": "$2y$10$vX.zzoKiboz6iphPaDP9UeDCkHr8ljMlEuayFBgL2V9goHs38rhzq"
+    },
+    {
+        "nombre": "hgfdehgjh",
+        "email": "admin@komun.com",
+        "password": "$2y$10$jx1tnSprzi1tqTc1hoSESeHjLiydvHINGUPnP0JnZwweInqCclF9q"
+    }
+]

@@ -1,0 +1,19 @@
+{
+  "usuarios": [
+    {
+      "nombre": "Ana",
+      "usuario": "ana123",
+      "password": "$2y$10$EjemploDeHash12345678901234567890123456789012345678"
+    },
+    {
+      "nombre": "Carlos",
+      "usuario": "carlosgr",
+      "password": "$2y$10$EjemploDeHash22345678901234567890123456789012345678"
+    },
+    {
+      "nombre": "Lucía",
+      "usuario": "lucifern",
+      "password": "$2y$10$EjemploDeHash32345678901234567890123456789012345678"
+    }
+  ]
+}

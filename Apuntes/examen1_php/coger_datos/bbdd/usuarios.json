@@ -1,0 +1,34 @@
+{
+  "usuarios": [
+    {
+      "nombre": "Ana",
+      "apellidos": "Martínez López",
+      "usuario": "ana123",
+      "password": "$2y$10$H7O0qQdq1Tv4Qqyz8zY70.0GR6wR3VwCeT3A4McoLBOikgCAv7Bq2"
+    },
+    {
+      "nombre": "Carlos",
+      "apellidos": "Gómez Ruiz",
+      "usuario": "carlosgr",
+      "password": "$2y$10$4Cr1Zf5Xgk5KETvKXkQJHe8pcfM6jImbWWVabDeoj2NyrCOmX4TrO"
+    },
+    {
+      "nombre": "Lucía",
+      "apellidos": "Fernández Torres",
+      "usuario": "lucifern",
+      "password": "$2y$10$z6fEcR1owZwzn6bLq8eMxOJrHy5cN3PD3L6YB02aiXY1K8a4q9rVu"
+    },
+    {
+      "nombre": "Miguel",
+      "apellidos": "Pérez Díaz",
+      "usuario": "miguelpd",
+      "password": "$2y$10$TPzUsK.7AlYoZrZ/2kRhCuBoNhiTzE.A3MXthERcVQz8D4BMbFVni"
+    },
+    {
+      "nombre": "alejandra",
+      "apellidos": "Pérez Díaz",
+      "usuario": "admin",
+      "password": "$2y$10$iEy86KTZlvsmI6cxv4aHUeJv/0N8iqtK03lBMdlaEbK0oGR3cE1MG"
+    }
+  ]
+}

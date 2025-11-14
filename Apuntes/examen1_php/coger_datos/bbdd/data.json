@@ -1,0 +1,88 @@
+{
+  "coches": [
+    {
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "anio": 2018,
+      "recambios": [
+        {
+          "nombre": "Filtro de aceite",
+          "codigo": "TOY-FO-2018",
+          "precio": 12.50,
+          "disponibilidad": true,
+          "proveedor": "Bosch"
+        },
+        {
+          "nombre": "Pastillas de freno delanteras",
+          "codigo": "TOY-PF-18",
+          "precio": 35.90,
+          "disponibilidad": true,
+          "proveedor": "Ferodo"
+        },
+        {
+          "nombre": "Batería híbrida",
+          "codigo": "TOY-BH-18",
+          "precio": 850.00,
+          "disponibilidad": false,
+          "proveedor": "Panasonic"
+        }
+      ]
+    },
+    {
+      "marca": "Ford",
+      "modelo": "Focus",
+      "anio": 2020,
+      "recambios": [
+        {
+          "nombre": "Filtro de aire",
+          "codigo": "FOR-FA-20",
+          "precio": 15.00,
+          "disponibilidad": true,
+          "proveedor": "MANN"
+        },
+        {
+          "nombre": "Discos de freno traseros",
+          "codigo": "FOR-DF-20",
+          "precio": 79.99,
+          "disponibilidad": true,
+          "proveedor": "Brembo"
+        },
+        {
+          "nombre": "Amortiguador delantero",
+          "codigo": "FOR-AD-20",
+          "precio": 95.50,
+          "disponibilidad": true,
+          "proveedor": "Monroe"
+        }
+      ]
+    },
+    {
+      "marca": "Volkswagen",
+      "modelo": "Golf",
+      "anio": 2019,
+      "recambios": [
+        {
+          "nombre": "Filtro de combustible",
+          "codigo": "VW-FF-19",
+          "precio": 22.75,
+          "disponibilidad": true,
+          "proveedor": "Mahle"
+        },
+        {
+          "nombre": "Correa de distribución",
+          "codigo": "VW-CD-19",
+          "precio": 110.00,
+          "disponibilidad": false,
+          "proveedor": "Contitech"
+        },
+        {
+          "nombre": "Sensor de presión turbo",
+          "codigo": "VW-SPT-19",
+          "precio": 48.30,
+          "disponibilidad": true,
+          "proveedor": "Bosch"
+        }
+      ]
+    }
+  ]
+}

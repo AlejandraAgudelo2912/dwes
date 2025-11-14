@@ -1,0 +1,40 @@
+[
+    {
+        "title": "Cien A\u00f1os de Soledad",
+        "author": "Gabriel Garc\u00eda M\u00e1rquez",
+        "year": 1967,
+        "caratula": "bbdd\/portadas\/cervantes.jpg",
+        "genre": [
+            "Romance",
+            "Terror"
+        ]
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "year": 1949,
+        "caratula": "bbdd\/portadas\/generico.jpg",
+        "genre": [
+            "Ciencia ficci\u00f3n",
+            "Filosofia"
+        ]
+    },
+    {
+        "title": "Orgullo y Prejuicio",
+        "author": "Jane Austen",
+        "year": 1813,
+        "caratula": "bbdd\/portadas\/cervantes.jpg",
+        "genre": [
+            "Romance"
+        ]
+    },
+    {
+        "title": "El Principito",
+        "author": "Antoine de Saint-Exup\u00e9ry",
+        "year": 1943,
+        "caratula": "bbdd\/portadas\/generico.jpg",
+        "genre": [
+            "Ciencia ficci\u00f3n"
+        ]
+    }
+]
