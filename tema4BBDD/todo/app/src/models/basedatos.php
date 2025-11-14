@@ -64,9 +64,20 @@ class Basedatos
         
     }
 
-    public function crear_tarea(){
-        
+    public function crear_tarea(Tarea $tarea){
+        $sql = "INSERT INTO tareas (descripcion, fecha_creacion, completada) VALUES (:descripcion, NOW(), 0)";
+        $descripcion = $tarea->getDescripcion();
+        try{
+            $sentencia = $this->conexionPDO->prepare($sql);
+            $sentencia->bindParam(':descripcion', $descripcion);
+            $sentencia->execute();
+            return true;
+        }
+        catch (PDOException $e){
+            $this->log->error("Error en crear_tarea");
+            $this->log->error($e->getMessage(), ['archivo:' => 'basedatos.php']);
+            return false;
+        }
     }
-
     
 }
