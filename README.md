@@ -1,6 +1,8 @@
 # DESARROLLO WEB ENTORNO SERVIDOR
-## Autor: Juan Antonio Cuello 
+## Autor: Alejandra Agudelo Varela 
 
-Ejercicios del módulo **Desarrollo Web entorno Servidor** del ciclo de DAW
+Apuntes y exámenes de la asignatura de desarrollo web en entorno servidor
+
+I'm just a girl.
 
 IES Floridablanca
