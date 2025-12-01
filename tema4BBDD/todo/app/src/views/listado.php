@@ -41,13 +41,13 @@ $sentencia = $db->get_data($sql);
             <?= $t->fecha_creacion->format('d/m/Y') ?>
 
             <?php if (!$t->completada): ?>
-                <form action="" method="POST" class="inline">
+                <form action="../controllers/update_tarea.php" method="POST" class="inline">
                     <input type="hidden" name="id" value="<?= $t->id ?>">
                     <button type="submit">✔</button>
                 </form>
             <?php endif; ?>
 
-            <form action="PARA BORRAR LA TAREA" method="POST" class="inline">
+            <form action="../controllers/delete_tarea.php" method="POST" class="inline">
                 <input type="hidden" name="id" value="<?= $t->id ?>">
                 <button type="submit">🗑️</button>
             </form>

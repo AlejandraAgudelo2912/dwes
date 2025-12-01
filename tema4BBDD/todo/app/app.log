@@ -1,0 +1,2 @@
+[2025-11-14T20:02:35.511075+01:00] app.ERROR: Fallo en el CONSTRUCTOR creando el objeto PDO [] []
+[2025-11-14T20:02:35.573197+01:00] app.ERROR: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión {"archivo:":"basedatos.php"} []

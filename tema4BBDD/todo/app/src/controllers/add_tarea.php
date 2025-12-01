@@ -22,7 +22,7 @@ if(empty($descripcion)){
 
 $tarea =new Tarea (null,$descripcion,0);
 
-$creada=$db->crear_tarea($tarea);
+$db->crear_tarea($tarea);
 
 header('Location: ../views/listado.php');
 die;
