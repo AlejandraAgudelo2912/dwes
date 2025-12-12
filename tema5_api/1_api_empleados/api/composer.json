@@ -1,0 +1,18 @@
+{
+    "name": "aleja/api",
+    "description": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": [
+            "src/routes.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "alejandra agudelo varela"
+        }
+    ],
+    "require": {}
+}
