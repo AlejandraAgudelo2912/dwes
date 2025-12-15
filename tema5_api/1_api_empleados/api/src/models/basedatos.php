@@ -56,6 +56,39 @@ class Basedatos
         
     }
 
+    public function insertarEmpleado($data){
+
+        $sql = "INSERT INTO empleados (nombre, direccion, salario) VALUES (:nombre, :direccion, :salario)";
+        $nombre=$data['nombre'];
+        $direccion=$data['direccion'];
+        $salario=$data['salario'];
+            
+        try{
+            $sentencia = $this->conexionPDO->prepare($sql);
+            $sentencia->bindParam(':nombre', $nombre);
+            $sentencia->bindParam(':direccion', $direccion);
+            $sentencia->bindParam(':salario', $salario);
+            $sentencia->execute();
+            return true;
+        }
+            catch (PDOException $e){
+            return false;
+        }
+    }
+
+     public function borrarEmpleado(int $id){
+       $sql = "DELETE FROM empleados WHERE id = :id";
+
+         try{
+            $sentencia=$this->conexionPDO->prepare($sql);
+             $sentencia->bindParam(":id", $id);
+            $sentencia->execute();
+             return true;
+         }catch(PDOException $e){
+            return false;
+         }
+     } 
+
     /**    
      * public function crear_tarea(Tarea $tarea){
     *   $sql = "INSERT INTO tareas (descripcion, fecha_creacion, completada) VALUES (:descripcion, NOW(), 0)";

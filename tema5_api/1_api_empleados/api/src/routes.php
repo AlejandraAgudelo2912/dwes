@@ -60,6 +60,39 @@ function manejarRequest($uri, $requestMethod, $param){
             }
             break;
 
+            case 'POST':
+                $data = json_decode(file_get_contents('php://input'), true);
+
+                $insercionOK=$db->insertarEmpleado($data);
+                if($insercionOK){
+                    $respuesta =['mensaje' => 'Empleado añadido'];
+                    http_response_code(201);
+                    echo json_encode($respuesta);
+                    exit();
+                }else{
+                    $respuesta=['mensaje' => 'Error al añadir persona'];
+                    http_response_code(500);
+                    echo json_encode($respuesta);
+                    exit();
+                }
+
+                case 'DELETE':
+                    if($userId!=null && $userId !=""){
+                        $borrarOk=$db->borrarEmpleado($userId);
+                        if($borrarOk){
+                            $respuesta =["mensaje" => 'empelado borrado'];
+                            http_response_code(200);
+                            echo json_encode($respuesta);
+                            exit();
+
+                        }else{
+                             $respuesta =["mensaje" => 'error al borrado'];
+                            http_response_code(500);
+                            echo json_encode($respuesta);
+                            exit();
+                        }
+                    }
+
         default:
             header("HTTP/1.1 400 Bad Request");
             $respuesta = ["mensaje" => "No existe el endpoint"];
