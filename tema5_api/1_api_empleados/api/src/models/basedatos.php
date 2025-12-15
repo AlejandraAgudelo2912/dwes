@@ -76,47 +76,18 @@ class Basedatos
         }
     }
 
-     public function borrarEmpleado(int $id){
-       $sql = "DELETE FROM empleados WHERE id = :id";
+    public function borrarEmpleado(int $id){
 
-         try{
+        $sql = "DELETE FROM empleados WHERE id = :id";
+
+        try{
             $sentencia=$this->conexionPDO->prepare($sql);
-             $sentencia->bindParam(":id", $id);
+            $sentencia->bindParam(":id", $id);
             $sentencia->execute();
-             return true;
-         }catch(PDOException $e){
+            return true;
+        }catch(PDOException $e){
             return false;
-         }
+        }
      } 
-
-    /**    
-     * public function crear_tarea(Tarea $tarea){
-    *   $sql = "INSERT INTO tareas (descripcion, fecha_creacion, completada) VALUES (:descripcion, NOW(), 0)";
-    *     $descripcion = $tarea->getDescripcion();
-      *   try{
-        *     $sentencia = $this->conexionPDO->prepare($sql);
-          * *   $sentencia->bindParam(':descripcion', $descripcion);
-           *  $sentencia->execute();
-            * return true;
-        * }
-        * catch (PDOException $e){
-          *   return false;
-        * }
-    * }
-
-    * public function borrar_tarea(int $_id){
-      *   $sql = "DELETE FROM tareas WHERE id = :id";
-        * $id=$_id;
-
-        * try{
-          *   $sentencia=$this->conexionPDO->prepare($sql);
-            * $sentencia->bindParam(":id", $id);
-            * $sentencia->execute();
-            * return true;
-        * }catch(PDOException $e){
-          *   return false;
-        * }
-    * } 
-    */
     
 }

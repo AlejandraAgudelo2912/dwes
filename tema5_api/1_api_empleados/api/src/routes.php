@@ -86,7 +86,7 @@ function manejarRequest($uri, $requestMethod, $param){
                             exit();
 
                         }else{
-                             $respuesta =["mensaje" => 'error al borrado'];
+                            $respuesta =["mensaje" => 'error al borrado'];
                             http_response_code(500);
                             echo json_encode($respuesta);
                             exit();
