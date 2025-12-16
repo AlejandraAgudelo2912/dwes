@@ -89,5 +89,30 @@ class Basedatos
             return false;
         }
      } 
+
+    public function actualizarEmpleado( $id, $data){
+        
+        $usuario = $this->get_data("SELECT * FROM empleados WHERE id = :id", ['id' => $id])->fetch(PDO::FETCH_ASSOC);;
+        $sql = "UPDATE empleados SET nombre = :nombre, direccion=:direccion, salario=:salario WHERE id=:id";
+
+        $nombre = $data['nombre'] ?? $usuario['nombre'];
+        $direccion= $data['direccion'] ?? $usuario['direccion'];
+        $salario=  $data['salario'] ?? $usuario['salario'];
+
+            
+        try{
+            $sentencia = $this->conexionPDO->prepare($sql);
+            $sentencia->bindParam(':nombre', $nombre);
+            $sentencia->bindParam(':direccion', $direccion);
+            $sentencia->bindParam(':salario', $salario);
+            $sentencia->bindParam(':id', $id);
+
+            $sentencia->execute();
+            return true;
+        }
+            catch (PDOException $e){
+            return false;
+        }
+    }
     
 }

@@ -26,6 +26,7 @@ function manejarRequest($uri, $requestMethod, $param){
 
     //Miramos si hemos pedido usuario
     $userId = $partes[6] ?? null;
+    $data = json_decode(file_get_contents('php://input'), true);
 
     //Router analizador de petición
     switch ($requestMethod){
@@ -61,7 +62,6 @@ function manejarRequest($uri, $requestMethod, $param){
             break;
 
             case 'POST':
-                $data = json_decode(file_get_contents('php://input'), true);
 
                 $insercionOK=$db->insertarEmpleado($data);
                 if($insercionOK){
@@ -93,6 +93,27 @@ function manejarRequest($uri, $requestMethod, $param){
                         }
                     }
 
+                case 'PUT':
+                    
+                    if($userId!=null && $userId !=""){
+                        $actualizarOK=$db->actualizarEmpleado($userId, $data);
+
+                            
+                        if($actualizarOK){
+                            $respuesta =['mensaje' => 'Empleado actualizado'];
+                            http_response_code(201);
+                            echo json_encode($respuesta);
+                            exit();
+                        }else{
+                            $respuesta=['mensaje' => 'Error al actualizar persona'];
+                            http_response_code(500);
+                            echo json_encode($respuesta);
+                            exit();
+                        }
+                    }
+
+                   
+                    
         default:
             header("HTTP/1.1 400 Bad Request");
             $respuesta = ["mensaje" => "No existe el endpoint"];
