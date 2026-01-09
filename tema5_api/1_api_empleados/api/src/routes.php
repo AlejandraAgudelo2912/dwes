@@ -14,7 +14,7 @@ function manejarRequest($uri, $requestMethod, $param){
         echo json_encode($respuesta);
         die;
     }
-
+    
     $partes = explode('/', $uri);
 
     if ($partes[4] !== 'api' || $partes[5] != 'empleados'){
