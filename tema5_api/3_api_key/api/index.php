@@ -39,10 +39,38 @@ if ($partes[4] !=='api' || $partes[5] !='libros'){
 }
 
 $titulo = $partes[6] ?? null;
+$titulo=urldecode($titulo);
 
 switch ($requestMethod){
     case 'GET':
+        if($titulo==null){
+            $libros=obtenerLibros();
+            http_response_code(200);
+            echo json_encode($libros);
+            die;
+        }else{
+            $libros=obtenerLibros($titulo);
+            http_response_code(200);
+            echo json_encode($libros);
+            die;
+        }
+       
         break;
     case 'POST':
+        if($rol==='ADMIN'){
+            $data = json_decode(file_get_contents('php://input'),TRUE);
+
+            if(insertarLibro($data)){
+                http_response_code(201);
+                $respuesta=['mensaje'=>'Libro insertado con existo'];
+                echo json_encode($respuesta);
+            }
+
+        }else{
+            http_response_code(400);
+            $respuesta=['mensaje'=>'No tienes permiso para añadir libros bro'];
+            echo json_encode($respuesta);
+            die;
+        }
         break;
 }

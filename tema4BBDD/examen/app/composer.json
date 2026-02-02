@@ -1,0 +1,17 @@
+{
+    "name": "aleja/app",
+    "autoload": {
+        "psr-4": {
+            "App\\":"src/"
+        },
+         "files": [
+        "src/helpers/ayuda.php"
+        ]
+
+    },
+   
+    "require": {
+        "monolog/monolog": "^3.9",
+        "mpdf/mpdf": "^8.2"
+    }
+}

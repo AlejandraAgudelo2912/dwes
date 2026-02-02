@@ -1,0 +1,15 @@
+{
+    "name": "aleja/api",
+    "description": "a php api project",
+    "autoload":{
+        "psr-4":{
+            "App\\":"src/"
+        },
+        "files":[
+
+        ]
+    },
+    "require": {
+        "monolog/monolog": "^3.10"
+    }
+}
